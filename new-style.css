@@ -1,6 +1,8 @@
-
 body {
-  background-color: #f5f6fA;
+  text-align: center;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .main {
@@ -12,10 +14,13 @@ body {
 .search-container {
   display: flex;
   align-items: center;
+  background-color: black;
 }
 
 .map-container {
-  height: 500px;
+  /* background-color: white; */
+  border-radius: 16px;
+  /* padding: 1rem; */
 }
 
 .header-container {
@@ -26,6 +31,7 @@ body {
 #map {
    border-radius: 12px;
    overflow: hidden;
+   color: black;
 }
 
 .chart-container {
@@ -44,11 +50,13 @@ body {
 }
 
 .stats-container .card {
-  background-color:  white;
+  color: #000000;
+  /* background-color:  white; */
+  /* opacity: 65%; */
   border-radius: 12px;
-  box-shadow: 0 0 8px -4px rgba(0,0,0, 0.5);
+  /* box-shadow: 0 0 8px -4px rgba(0,0,0, 0.5); */
   overflow: hidden;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .stats-container .card-body {
@@ -56,7 +64,7 @@ body {
 }
 
 .stats-container .card-title {
-  color: #695d5c;
+  color: white;
   font-weight: 400;
 }
 
@@ -69,36 +77,46 @@ body {
 }
 
 .side-panel-container {
-  background-color: white;
-  border-bottom-left-radius: 30px;
-  border-top-left-radius: 30px;
+  /* background-color: white; */
+  border-radius: 16px;
   box-shadow: 0 0 8px -4px rgba(0,0,0, 0.5);
   padding-top: 15px;
+  
+}
+
+.side-panel-container .info-flag img {
+  width: 200px;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .total-number {
-  color: #cc1034;
+  color: #ffd166;
 }
 
 .recovered-number {
-  color: #7dd71d;
+  color: #3371a0;
 }
 .deaths-number {
-  color: #fb4443;
+  color: #d60f2e;
 }
 
 .cases-table-container h4, .chart-container h4 {
-  color: #6A5d5d;
+  color: white;
+  opacity: 75%;
   font-weight: 400;
 }
 
 .country-data .table td {
   padding: 0.5rem;
   border: none;
+  color: white;
+  opacity: 75%;
 }
 
 .card .card-title {
-  color: #6A5d5d;
+  color: white;
+  opacity: 75%;
 }
 
 .card.active > .tab-selection {
@@ -107,7 +125,7 @@ body {
 
 .tab-selection {
   height: 10px;
-  background-color: #cc1034;
+  background-color: #d60f2e;
   position: absolute;
   top: 0;
   left: 0;
@@ -122,13 +140,13 @@ body {
 }
 
 .cases .tab-selection {
-  background-color: #cc1034;
+  background-color: #ffd166;
 }
 
 .recovered .tab-selection {
-  background-color: #7fd922;
+  background-color: #3371a0;
 }
 
 .deaths .tab-selection {
-  background-color: #fa5575;
+  background-color: #B01635;
 }

@@ -27,8 +27,8 @@
     <div class="row main">
       <div class="col-12 col-lg-8 d-flex flex-column">
         <div class="row header-container">
-          <div class="col-sm title-container">
-            <h2>Covid-19 Tracker</h2>
+          <div class="col-sm title-container d-flex justify-content-between">
+            <h2><i class="fas fa-globe-americas pr-3"></i>Covid-19 Tracker</h2>
           </div>
           <div class="col-sm search-container mt-3 mt-sm-0">
             <div class="ui fluid search selection dropdown">
@@ -44,7 +44,7 @@
           <div class="col-12 col-sm-4 mb-3 mb-sm-0">
             <div class="card cases active" onclick="changeDataSelection(this, 'cases')">
               <div class="tab-selection"></div>
-              <div class="card-body">
+              <div class="card-body" style="background-color: black">
                 <h6 class="card-title"><i class="fas fa-procedures" style="font-size: 30px;"></i></h6>
                 <h3 class="card-subtitle mb-2 total-number">1,436,886</h3>
                 <div class="text-muted font-weight-bold total cases-total">1.69M Total</div>
@@ -54,7 +54,7 @@
           <div class="col-12 col-sm-4 mb-3 mb-sm-0">
             <div class="card recovered" onclick="changeDataSelection(this,'recovered')">
               <div class="tab-selection"></div>
-              <div class="card-body">
+              <div class="card-body" style="background-color: black">
                 <h6 class="card-title"><i class="fas fa-heartbeat" style="font-size: 30px;"></i></h6>
                 <h3 class="card-subtitle mb-2 recovered-number">302,964</h3>
                 <div class="text-muted font-weight-bold  total recovered-total">1.69M Total</div>
@@ -64,7 +64,7 @@
           <div class="col-12 col-sm-4 mb-3 mb-sm-0">
             <div class="card deaths" onclick="changeDataSelection(this,'deaths')">
               <div class="tab-selection"></div>
-              <div class="card-body">
+              <div class="card-body" style="background-color: black">
                 <h6 class="card-title"><i class="fas fa-skull-crossbones" style="font-size: 30px;"></i></h6>
                 <h3 class="card-subtitle mb-2 deaths-number">82,191</h3>
                 <div class="text-muted font-weight-bold total deaths-total">1.69M Total</div>
@@ -72,11 +72,22 @@
             </div>
           </div>
         </div>
-        <div class="row map-container flex-grow-1 mt-3">
+
+        <div class="row mt-4 flex-grow-1 flex-column" style="flex-basis: 400px;">
+          <div class="col d-flex flex-column flex-grow-1">
+            <div class="map-container d-flex flex-column flex-grow-1">
+              <div id="map" class="flex-grow-1"></div>
+            </div>
+          </div>
+        </div>
+        <!-- OG map -->
+        <!-- <div class="row map-container flex-grow-1 mt-3">
           <div class="col">
             <div id="map"></div>
           </div>
-        </div>
+        </div> -->
+
+
         <!-- <div class="row chart-container mt-3">
           <div class="col linear-chart p-3 mr-3">
             <canvas id="myChart"></canvas>
@@ -89,10 +100,10 @@
 
       </div>
       <div class="col-12 col-lg-4 side-panel-container my-3 d-flex flex-column">
-        <div class="cases-table-container">
+        <div class="cases-table-container" style="color: white;">
           <h4>Live Cases by Country</h4>
-          <div class="country-data">
-            <table class="country-data table">
+          <div class="country-data" style="color: white">
+            <table class="country-data table table-striped">
               <tbody id="table-data">
 
             </table>

@@ -31,7 +31,10 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 39.8283, lng: -98.5795 },
     zoom: 3,
-    styles: mapStyle
+    styles: mapStyle,
+    mapTypeControl: false,
+    fullscreenControl: false,
+    streetViewControl: false
 
   });
   infoWindow = new google.maps.InfoWindow();
@@ -112,7 +115,7 @@ const getCountryData = (countryIso) => {
 }
 
 const getWorldCoronaData = () => {
-  fetch("https://disease.sh/v2/all")
+  fetch("https://disease.sh/v3/covid-19/all")
     .then((response) => {
       return response.json()
     }).then((data) => {
@@ -215,6 +218,9 @@ const showDataInTable = (data) => {
 
     html += `
       <tr>
+        <td><div class="info-flag" style="background-image: url(${country.countryInfo.flag});
+        width: 100px">
+        </div></td>
         <td>${country.country}</td>
         <td>${numeral(country.cases).format('0,0')}</td>
     </tr>      
