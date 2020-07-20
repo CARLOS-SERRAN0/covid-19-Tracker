@@ -218,8 +218,8 @@ const showDataInTable = (data) => {
 
     html += `
       <tr>
-        <td><div class="info-flag" style="background-image: url(${country.countryInfo.flag});
-        width: 100px">
+        <td><div class="info-container">
+        <div class="info-flag" style="background-image: url(${country.countryInfo.flag});">
         </div></td>
         <td>${country.country}</td>
         <td>${numeral(country.cases).format('0,0')}</td>
