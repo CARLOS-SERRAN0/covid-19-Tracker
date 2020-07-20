@@ -81,7 +81,7 @@ body {
 .cases-table-container h4, .chart-container h4 {
   color: white;
   opacity: 75%;
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 
 .country-data .table td {

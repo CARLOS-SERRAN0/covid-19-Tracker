@@ -217,10 +217,10 @@ const showDataInTable = (data) => {
   data.forEach((country) => {
 
     html += `
-      <tr>
-        <td><div class="info-container">
-        <div class="info-flag" style="background-image: url(${country.countryInfo.flag});">
-        </div></td>
+      <tr><div class="flag-container">
+        <td>
+        <div class="flag" style="background-image: url(${country.countryInfo.flag});"></div></td>
+        </div>
         <td>${country.country}</td>
         <td>${numeral(country.cases).format('0,0')}</td>
     </tr>      

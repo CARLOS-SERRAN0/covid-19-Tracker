@@ -31,11 +31,11 @@
             <h2><i class="fas fa-globe-americas pr-3"></i>Covid-19 Tracker</h2>
           </div>
           <div class="col-sm search-container mt-3 mt-sm-0">
-            <div class="ui fluid search selection dropdown">
+            <div class="ui fluid search selection dropdown" style="opacity: 75%;">
               <input type="hidden" name="country">
               <i class="dropdown icon"></i>
               <div class="default text">Select Country</div>
-              <div class="menu">
+              <div class="menu" style="opacity: 95%;">
               </div>
             </div>
           </div>
@@ -80,15 +80,16 @@
             </div>
           </div>
         </div>
-        <!-- OG map -->
-        <!-- <div class="row map-container flex-grow-1 mt-3">
+      </div>
+      <!-- OG map -->
+      <!-- <div class="row map-container flex-grow-1 mt-3">
           <div class="col">
             <div id="map"></div>
           </div>
         </div> -->
 
 
-        <!-- <div class="row chart-container mt-3">
+      <!-- <div class="row chart-container mt-3">
           <div class="col linear-chart p-3 mr-3">
             <canvas id="myChart"></canvas>
           </div>
@@ -97,22 +98,22 @@
           </div>
         </div> -->
 
+      <div class="col-12 col-sm-0 col-lg-4 mt-4 mt-lg-0 d-flex pr-lg-0 flex-column">
+        <div class="side-panel-container my-3 d-flex flex-column">
+          <div class="cases-table-container" style="color: white;">
+            <h4>Live Cases by Country</h4>
+            <div class="country-data" style="color: white">
+              <table class="country-data table table-striped">
+                <tbody id="table-data"></tbody>
 
-      </div>
-      <div class="col-12 col-lg-4 side-panel-container my-3 d-flex flex-column">
-        <div class="cases-table-container" style="color: white;">
-          <h4>Live Cases by Country</h4>
-          <div class="country-data" style="color: white">
-            <table class="country-data table table-striped">
-              <tbody id="table-data">
-
-            </table>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="chart-container flex-grow-1 mt-3">
-          <h4>Total Global Cases</h4>
-          <div class="linear-chart p-3">
-            <canvas id="myChart"></canvas>
+          <div class="chart-container flex-grow-1 mt-3">
+            <h4>Total Global Cases</h4>
+            <div class="linear-chart pt-3 flex-grow-1">
+              <canvas id="myChart"></canvas>
+            </div>
           </div>
         </div>
       </div>

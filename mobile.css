@@ -1,6 +1,13 @@
-/* @media (min-width: 1280px) {
-  .side-panel-container{
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+@media (max-width: 540px) {
+  .flag, .flag-container{
+      height: 40px;
+      width: 60px;
+      background-size: cover;
+      border-radius: 50%;
+      overflow: hidden;
+    
   }
-} */
+  .country-data {
+      font-size: 12px;
+  }
+}
